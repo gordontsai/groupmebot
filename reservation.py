@@ -1,8 +1,9 @@
 from groupy.client import Client
-from datetime import datetime
+import datetime
 
-curr_date=datetime.now()
-dt_str=str(curr_date.month)+'/'+str(curr_date.day+7)
+curr_date=datetime.datetime.now()
+next_sunday=curr_date+datetime.timedelta(days=7)
+dt_str=str(next_sunday.month)+'/'+str(next_sunday.day)
 
 client=Client.from_token("0FpwvtwlWizeagQa5K4hEgLPEZqhLzDVETYJGs0Q")
 
